@@ -40,31 +40,25 @@ public class Listener implements org.bukkit.event.Listener {
                 if (lists.requiresPickaxe(mat))
                     if (lists.toolBreaksStone(breaker.getInventory().getItemInMainHand().getType()))
                         item = new ItemStack(mat);
-                    else { evt.setCancelled(true); return; }
+                    else { evt.setCancelled(true); blocc.setType(Material.AIR, true); return; }
                 else
                     item = new ItemStack(mat);
                 switch (mat) {
-                    case GRASS_BLOCK -> {
-                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH)) {
+                    case GRASS_BLOCK:
+                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH))
                             item = new ItemStack(Material.GRASS_BLOCK);
-                        } else {
+                        else
                             item = new ItemStack(Material.DIRT);
-                        }
-                    }
-                    case STONE -> {
-                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH)) {
+                    case STONE:
+                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH))
                             item = new ItemStack(Material.STONE);
-                        } else {
+                        else
                             item = new ItemStack(Material.COBBLESTONE);
-                        }
-                    }
-                    case GRAVEL -> {
-                        if (new Random().nextInt(8) == 0) {
+                    case GRAVEL:
+                        if (new Random().nextInt(8) == 0)
                             item = new ItemStack(Material.FLINT);
-                        } else {
+                        else
                             item = new ItemStack(Material.GRAVEL);
-                        }
-                    }
                 }
                 breaker.getInventory().addItem(item);
                 blocc.setType(Material.AIR, true);
