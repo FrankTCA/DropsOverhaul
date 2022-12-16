@@ -49,16 +49,19 @@ public class Listener implements org.bukkit.event.Listener {
                             item = new ItemStack(Material.GRASS_BLOCK);
                         else
                             item = new ItemStack(Material.DIRT);
+                        break;
                     case STONE:
                         if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH))
                             item = new ItemStack(Material.STONE);
                         else
                             item = new ItemStack(Material.COBBLESTONE);
+                        break;
                     case GRAVEL:
                         if (new Random().nextInt(8) == 0)
                             item = new ItemStack(Material.FLINT);
                         else
                             item = new ItemStack(Material.GRAVEL);
+                        break;
                 }
                 breaker.getInventory().addItem(item);
                 blocc.setType(Material.AIR, true);
