@@ -1,0 +1,10 @@
+# DropsOverhaul configuration
+
+# When /killdrops is used, what radius should the player be allowed to kill drops around them?
+killdrops-radius: 20
+
+# Should everyone be allowed to use /killdrops? If false, the permission dropsoverhaul.killdrops will be used.
+default-everyone-killdrops: true
+
+# If the player's inventory is full, should the plugin delete junk blocks altogether, or should it drop the junk blocks and do the normal behavior
+full-inventory-delete: true

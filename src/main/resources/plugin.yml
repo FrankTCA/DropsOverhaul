@@ -1,0 +1,16 @@
+name: DropsOverhaul
+version: '${version}'
+main: org.infotoast.dropsoverhaul.Plugin
+api-version: 1.19
+prefix: DropsOverhaul
+authors: [ Frank ]
+description: Innovative lag prevention plugin stopping drops before they happen!
+website: infotoast.org
+commands:
+  killdrops:
+    description: This command will allow players to kill all drops in the radius specified in the configuration, default 20
+permissions:
+  dropsoverhaul.killdrops:
+    descrption: An optional permission that can be enabled in the config that allows you to determine who is allowed to run /killdrops
+    default: true
+
