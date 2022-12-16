@@ -37,12 +37,8 @@ public class Plugin extends JavaPlugin {
 
         customConfig = new YamlConfiguration();
         try {
-            customConfig.load(customConfigFile);
-        } catch (InvalidConfigurationException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        customConfig.load(customConfigFile);
+        } catch (InvalidConfigurationException | IOException e) {
             e.printStackTrace();
         }
     }
