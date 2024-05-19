@@ -1,5 +1,4 @@
 [![Issues][issues-shield]][issues-url]
-[![Discord][discord-shield]][discord-url]
 
 <br />
 <div align="center">
@@ -18,8 +17,6 @@
     <a href="https://infotoast.org/">See our website</a>
     ·
     <a href="https://github.com/FrankTCA/DropsOverhaul/issues">Report Bugs</a>
-    ·
-    <a href="https://discord.gg/2wMPtrZbPF">Join our Discord</a>
   </p>
 </div>
 
@@ -62,5 +59,3 @@ If you wish to build from source, just clone this repository, and then
 [issues-url]: https://github.com/FrankTCA/LoraxCustomTrees/issues
 [license-shield]: https://img.shields.io/github/license/FrankTCA/LoraxCustomTrees.svg?style=for-the-badge
 [license-url]: https://github.com/PG85/OpenTerrainGenerator/blob/master/LICENSE.md
-[discord-shield]: https://img.shields.io/discord/714199392516702280?style=for-the-badge
-[discord-url]: https://discord.gg/2wMPtrZbPF
