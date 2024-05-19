@@ -67,7 +67,7 @@ public class Listener implements org.bukkit.event.Listener {
                 blocc.setType(Material.AIR, true);
                 if (lists.isTool(breaker.getInventory().getItemInMainHand().getType()))
                     if (breaker.getInventory().getItemInMainHand().getItemMeta() instanceof Damageable) {
-                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.DURABILITY) && new Random().nextInt(breaker.getInventory().getItemInMainHand().getEnchantmentLevel(Enchantment.DURABILITY) + 1) != 0)
+                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.UNBREAKING) && new Random().nextInt(breaker.getInventory().getItemInMainHand().getEnchantmentLevel(Enchantment.UNBREAKING) + 1) != 0)
                                 breaker.getInventory().getItemInMainHand().setDurability((short)(((Damageable)breaker.getInventory().getItemInMainHand().getItemMeta()).getDamage() + 1));
                         else
                             breaker.getInventory().getItemInMainHand().setDurability((short)(((Damageable)breaker.getInventory().getItemInMainHand().getItemMeta()).getDamage() + 1));
