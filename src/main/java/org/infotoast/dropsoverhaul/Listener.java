@@ -21,6 +21,7 @@ public class Listener implements org.bukkit.event.Listener {
     public Listener(Plugin pl) {
         this.pl = pl;
     }
+    private Random rand = new Random();
     @EventHandler
     public void onBlockBreak(BlockBreakEvent evt) {
         ItemLists lists = new ItemLists();
@@ -67,9 +68,7 @@ public class Listener implements org.bukkit.event.Listener {
                 blocc.setType(Material.AIR, true);
                 if (lists.isTool(breaker.getInventory().getItemInMainHand().getType()))
                     if (breaker.getInventory().getItemInMainHand().getItemMeta() instanceof Damageable) {
-                        if (breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.UNBREAKING) && new Random().nextInt(breaker.getInventory().getItemInMainHand().getEnchantmentLevel(Enchantment.UNBREAKING) + 1) != 0)
-                                breaker.getInventory().getItemInMainHand().setDurability((short)(((Damageable)breaker.getInventory().getItemInMainHand().getItemMeta()).getDamage() + 1));
-                        else
+                        if (!(breaker.getInventory().getItemInMainHand().containsEnchantment(Enchantment.UNBREAKING) && rand.nextInt(100) > (100 / (breaker.getInventory().getItemInMainHand().getEnchantmentLevel(Enchantment.UNBREAKING) + 1))))
                             breaker.getInventory().getItemInMainHand().setDurability((short)(((Damageable)breaker.getInventory().getItemInMainHand().getItemMeta()).getDamage() + 1));
                         if (breaker.getInventory().getItemInMainHand().getDurability() >= breaker.getInventory().getItemInMainHand().getType().getMaxDurability() && breaker.getInventory().getItemInMainHand().getType().getMaxDurability() > 0)
                             breaker.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
