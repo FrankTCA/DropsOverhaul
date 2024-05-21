@@ -1,10 +1,35 @@
-# DropsOverhaul configuration
+# DropsOverhaul Configuration #
+Settings:
+  # When /killdrops is used, what radius should the player be allowed to kill drops around them?
+  Kill-Drops-Radius: 20
+  # If the player's inventory is full, should the plugin delete junk blocks altogether, or should it drop the junk blocks and do the normal behavior
+  Full-Inventory-Delete: true
+  # List of materials to remove when mined
+  Drops-To-Remove:
+    - "DIRT"
+    - "STONE"
+    - "SAND"
+    - "SANDSTONE"
+    - "DIORITE"
+    - "GRANITE"
+    - "ANDESITE"
+    - "GRAVEL"
+    - "NETHERRACK"
+    - "BLACKSTONE"
+    - "BASALT"
+    - "GRASS_BLOCK"
+    - "TUFF"
+    - "CALCITE"
+    - "COBBLED_DEEPSLATE"
+    - "DEEPSLATE"
+    - "SMOOTH_BASALT"
 
-# When /killdrops is used, what radius should the player be allowed to kill drops around them?
-killdrops-radius: 20
-
-# Should everyone be allowed to use /killdrops? If false, the permission dropsoverhaul.killdrops will be used.
-default-everyone-killdrops: true
-
-# If the player's inventory is full, should the plugin delete junk blocks altogether, or should it drop the junk blocks and do the normal behavior
-full-inventory-delete: true
+Messages:
+  Player-Only: "&cOnly players can use this command."
+  No-Permission: "&cAccess denied."
+  Item-Delete: "&aSuccessfully removed %amount% items."
+  Command:
+    Help-Header: "&aDrops Overhaul Commands"
+    Reload-Command: "&7/do reload &8- &eReloads the configuration."
+    Kill-Drops-Command: "&7/do killdrops &8- &eKills nearby items."
+    Reloaded: "&aSuccessfully reloaded configuration."
