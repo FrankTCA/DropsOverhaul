@@ -18,12 +18,11 @@ public class DropsOverhaul extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-
-        // Handle older configurations
-        if (!this.getConfig().isInt("Config-Version")) {
+        if ((!getConfig().contains("Config-Version")) || getConfig().contains("Settings.Config-Version")) {
             saveOldConfigAndMakeNew();
         }
-        if (this.getConfig().getInt("Config-Version") != 1) {
+        // Handle older configurations
+        if (getConfig().getInt("Config-Version") != 2) {
             saveOldConfigAndMakeNew();
         }
 

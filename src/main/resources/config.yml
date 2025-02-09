@@ -1,7 +1,8 @@
+# Handle old configs, do not touch
+Config-Version: 2
+
 # DropsOverhaul Configuration #
 Settings:
-  # Handle old configs, do not touch
-  Config-Version: 1
   # When /killdrops is used, what radius should the player be allowed to kill drops around them?
   Kill-Drops-Radius: 20
   # If the player's inventory is full, should the plugin delete junk blocks altogether, or should it drop the junk blocks and do the normal behavior
@@ -30,9 +31,19 @@ Messages:
   Player-Only: "&cOnly players can use this command."
   No-Permission: "&cAccess denied."
   No-Permission-Killdrops-Radius: "&cYou don't have permission to specify a radius."
+  Invalid-Block-Specified-AddBlock: "&c%block% is not a valid block."
+  Invalid-Block-Specified-RemoveBlock: "&c%block% is not on the list."
+  AddBlock-Usage: "&cPlease use /do addblock <block>."
   Item-Delete: "&aSuccessfully removed %amount% items."
   Command:
     Help-Header: "&aDrops Overhaul Commands"
     Reload-Command: "&7/do reload &8- &eReloads the configuration."
+    AddBlock-Command: "&7/do addblock <block> &8- &eAdds block to list of blocks for dropsoverhaul to affect."
+    RemoveBlock-Command: "&7/do removeblock <block> &8- &eRemoves block from the list."
+    List-Command: "&7/do list &8- &eShows block list"
     Kill-Drops-Command: "&7/do killdrops &8- &eKills nearby items."
     Reloaded: "&aSuccessfully reloaded configuration."
+    Block-Added: "&aSuccessfully added %block% to the block list."
+    Block-Removed: "&aSuccessfully removed %block% from the block list."
+    List-Header: "&aDrops Overhaul-affected blocks list"
+    List-Item: "&7-  &a%block%"

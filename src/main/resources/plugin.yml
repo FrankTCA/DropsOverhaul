@@ -9,8 +9,9 @@ website: infotoast.org
 
 commands:
   dropsoverhaul:
+    aliases: [ "do" ]
     description: Reload the configuration or kill all nearby item entities.
-    usage: /dropsoverhaul <command>
+    usage: /dropsoverhaul <reload|addblock> [params]
   killdrops:
     aliases: [ "kd" ]
     description: Kills all drops within a radius specified in config
@@ -25,4 +26,7 @@ permissions:
     default: true
   dropsoverhaul.killdrops.radius:
     description: Players who have this permission can use /killdrops <radius>
+    default: op
+  dropsoverhaul.addblock:
+    description: Players who have this permission can use /dropsoverhaul addblock <block>
     default: op
