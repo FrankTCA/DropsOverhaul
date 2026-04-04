@@ -11,7 +11,7 @@ commands:
   dropsoverhaul:
     aliases: [ "do" ]
     description: Reload the configuration or kill all nearby item entities.
-    usage: /dropsoverhaul <reload|addblock> [params]
+    usage: /dropsoverhaul <reload|addblock|removeblock|list> [params]
   killdrops:
     aliases: [ "kd" ]
     description: Kills all drops within a radius specified in config
@@ -29,4 +29,10 @@ permissions:
     default: op
   dropsoverhaul.addblock:
     description: Players who have this permission can use /dropsoverhaul addblock <block>
+    default: op
+  dropsoverhaul.removeblock:
+    description: Players who have this permission can use /dropsoverhaul removeblock <block>
+    default: op
+  dropsoverhaul.list:
+    description: Players who have this permission can use /dropsoverhaul list
     default: op
